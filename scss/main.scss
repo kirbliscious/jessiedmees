@@ -1,0 +1,233 @@
+/*----------------
+	Imports
+----------------*/
+@import 'bootstrap.scss';
+@import 'buttons.scss';
+@import 'image-sizes.scss';
+@import 'focuspoint.scss';
+
+
+/*----------------
+	Variables
+----------------*/
+
+
+/*----------------
+	General
+----------------*/
+*{
+    box-sizing:border-box;
+    font-size:0;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font-size:14px;
+}
+
+ul,li{
+    list-style:none;
+    -webkit-margin-before:0;
+    -webkit-margin-after:0;
+    -webkit-padding-start:0;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+	outline:0;
+	border:0;
+}
+
+/*----------------
+	Typography
+----------------*/
+@font-face {
+	font-family: 'proxima-nova';
+	src: url('http://localhost/jessiedmees-dev/fonts/proximanova-light.eot');
+	src: local('☺'), url('http://localhost/jessiedmees-dev/fonts/proximanova-light.woff') format('woff'), url('http://localhost/jessiedmees-dev/fonts/proximanova-light.ttf') format('truetype'), url('http://localhost/jessiedmees-dev/fonts/proximanova-light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'monalisa';
+	src: url('http://localhost/jessiedmees-dev/fonts/monalisa.eot');
+	src: local('☺'), url('http://localhost/jessiedmees-dev/fonts/monalisa.woff') format('woff'), url('http://localhost/jessiedmees-dev/fonts/monalisa.ttf') format('truetype'), url('http://localhost/jessiedmees-dev/fonts/monalisa.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+h1{ margin:0;
+	font-size:42px;
+}
+h2{}
+h3{}
+
+a,p,li,div,span,li{
+	font-family:"proxima-nova",sans-serif;
+	font-size: 14px;
+}
+
+/*----------------
+	Layout
+----------------*/
+.sidebar{
+	position:fixed;
+	top:0;
+	left:0;
+	width:240px;
+	padding:30px 10px;
+	text-align: center;
+	height: 100%;
+
+	h1{
+		position:absolute;
+		top:55px;
+		width:100%;
+		font-family:'monalisa',helvetica,sans-serif;
+		font-size:28px;
+	}
+
+	#Logo{
+		z-index:10;
+		opacity:.8;
+
+		img{
+			max-width:140px;
+			height:auto;
+		}
+	}
+
+	#Scroll_Right{
+		margin:20px 0;
+		span{
+			font-size:11px;
+			font-style: italic;
+		}
+		img{
+			width:20px;
+			height:auto;
+			margin-left:5px;
+		}
+	}
+
+	/*- Filters -*/
+	.filter-items { 
+		margin-top:20px;
+		display:block;
+	}
+
+	.filter-label {
+		display: block;
+		padding: 5px;
+		cursor: pointer;
+		text-align: center;
+
+		ul{
+			margin:5px 0;
+
+			li{
+				padding:2px;
+			}
+		}
+
+		&.active{
+			text-decoration: underline;
+		}
+
+		&:hover{
+			text-decoration: underline;
+			cursor: pointer;
+			ul li{
+				text-decoration: none !important;
+
+				/*&:hover{
+					ttext-decoration:underline;
+				}*/
+			}
+		}
+	}
+
+	.filter-label.active,
+	.filter-label:hover {
+	}
+}
+
+
+#Layout {
+	position: absolute;
+	right: 0;
+	left: 240px;
+	top: 0;
+	bottom: 0;
+	/*padding: 20px;*/
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+#Freewall {
+	height: 100%;
+
+}
+
+.brick{
+	position:relative;
+	float:left;
+	overflow:hidden;
+}
+
+/*----------------
+	Photo Grid
+----------------*/
+.overlay{
+	position:absolute;
+	width:100%; height:100%;
+	top:0; bottom:0; left:0; right:0;
+	opacity:.95;
+	transition:opacity 3s ease;
+
+	&:hover{
+		opacity:0;
+		cursor:pointer;
+	}
+}
+.overlay-top{
+	position:absolute;
+	width:100%; height:35%;
+	top:0; left:0;
+	background-color:white;
+}
+.overlay-bottom{
+	position:absolute;
+	width:100%; height:35%;
+	bottom:0; left:0;
+	background-color:white;
+}
+.overlay-left{
+	position:absolute;
+	width:35%; height:100%;
+	top:0; left:0;
+	background-color:white;
+}
+.overlay-right{
+	position:absolute;
+	width:35%; height:100%;
+	top:0; right:0;
+	background-color:white;
+}
+
+@import 'mobile.scss';
+
+
+
+
+
+
+
+
+
+
+
