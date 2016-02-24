@@ -1,56 +1,140 @@
 /* Phone */
 @media screen and (max-width:768px) {
+	/* Modal */
+	.modal.modal-wsidebar{
+		.modal-body{
+			width:100%;
+			padding:0 10px;
+		}
+		.sidebar{
+			width:100%;
+			padding:10px;
+			.sidebar-container{
+				width:100%;
+				max-width: 100%;
+			}
+			h1{
+				margin:0;
+				font-size:22px;
+			}
+		}
+	}
+	.modal{
+		left:0;
+		.close{
+			bottom:-5px;
+			width:10%;
+			background-color:#fff;
+			text-align: center;
+			padding-bottom:5px;
+			position: fixed;
+			border-top:1px solid #ccc;
+			border-left:1px solid #ccc;
+		}
+		.modal-content{
+			overflow-y:scroll;
+			padding-bottom:50px;
+		}
+		.sidebar{
+			height:auto;
+			display:block;
+			position: relative;
+		}
+		.modal-body{
+			padding:10px;
+			height:auto;
+			overflow-y:hidden;
+		}
+	}
+	.modal-backdrop{
+		left:0;
+	}
+	.previous{
+		bottom:-5px;
+		left:0;
+		width:45%;
+		background-color:#fff;
+		text-align: center;
+		padding-bottom:5px;
+		position: fixed;
+		border-top:1px solid #ccc;
+	}
+	.next{
+		bottom:-5px;
+		left:45%;
+		width:45%;
+		background-color:#fff;
+		text-align: center;
+		padding-bottom:5px;
+		position: fixed;
+		border-top:1px solid #ccc;
+		border-left:1px solid #ccc;
+	}
+
+	ul.thumbnails{
+		display:none;
+	}
+
+	/* Sidebar */
 	.sidebar{
 		width:100%;
-		height:100px;
+		height:80px;
 		display: block;
-		padding:10px;
+		padding:0;
 		text-align: center;
 		z-index: 100;
 		position:relative;
 
 		header{
 			width:100%;
-			height:60px;
+			height:100%;
 		}
 		#Logo{
 			height:100%; 
 		}
 
 		#Logo img{
-			height:100%;
+			height:60px;
 			width:auto;
+			margin-top:10px;
 		}
 		h1{
 			width:100%;
 			top:20px;
 		}
+		>p,
 		#Scroll_Right{
-			margin:5px 0;
+			display:none;
 		}
 		.filter-items{
 			display:none;
 			margin-top:0;
 			border-top:1px solid #eee;
-		}
-		.filter-label{
-			background-color: #fff;
-			line-height: 40px;
-			border-bottom:1px solid #eee;
-			transition:background-color .5s ease;
-			&:hover{
-				text-decoration:none;
-				background-color:#000;
-				color:#fff;
+			li{
+				background-color: #fff;
+				line-height: 40px;
+				border-bottom:1px solid #eee;
+				transition:background-color .5s ease;
+				&:hover,
+				&.active{
+					text-decoration: none;
+					background-color:#000;
+					color:#fff;
+					cursor: pointer;
+
+					a{
+						text-decoration: none;
+						color:#fff;
+					}
+				}
 			}
 		}
+		
 		.menu-btn{
 			position:absolute;
 			top:25px;
 			right:20px;
-			&:hover{
-				cursor:pointer;
-			}
+			@include modalbutton();
 		}
 		.menu-btn span{
 			display:block;
@@ -61,31 +145,18 @@
 			z-index:99;
 		}
 	}
-
+	.thumbnails{
+		display:none;
+	}
 	.overlay{
 		opacity:0;
 	}
 	
-	.modal{
-		.close{
-			top:0;
-		}
-		.modal-content{
-			height:auto;
-		}
-		.sidebar{
-			height:auto;
-			display:block;
-			position: relative;
-		}
-		.modal-body{
-			padding:15px;
-			overflow-y:hidden;
-		}
-	}
 	#Layout{
 		left:0;
-		top:100px;
+		top:80px;
+		overflow-y:scroll;
+		overflow-x:hidden;
 	}
 	/*---------------- 
 	Box Sizes
@@ -122,8 +193,8 @@
 		height: 320px * .6;
 	}
 	.size43 {
-		width: 640px * .6;
-		height: 480px * .6;
+		width: 640px * .8;
+		height: 480px * .8;
 	}
 	.size53 {
 		width: 800px * .6;
@@ -132,8 +203,8 @@
 
 	/* Vertical */
 	.size12 {
-		width: 160px * .6;
-		height: 320px * .6;
+		width: 160px * .7;
+		height: 320px * .8;
 	}
 	.size13 {
 		width: 160px * .6;
@@ -144,8 +215,8 @@
 		height: 480px * .6;
 	}
 	.size24 {
-		width: 320px * .6;
-		height: 640px * .6;
+		width: 320px * .8;
+		height: 640px * .8;
 	}
 	.size34 {
 		width: 480px * .6;

@@ -1,3 +1,53 @@
+@mixin modalbutton(){
+  color:#000;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  font-weight:100;
+  font-size:35px;
+  font-family:’proxima-nova’,helvetica, sans-serif;
+  transition:opacity .5s ease;
+  line-height: 1;
+  z-index: 1500;
+
+  &:hover,
+  &:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+}
+
+/* Modal buttons */
+.close,
+.next,
+.previous {
+  position:fixed;
+  -webkit-appearance: none;
+  background: transparent;
+  right:0;
+  z-index:2000;
+
+  span{
+    @include modalbutton();
+  }
+}
+
+@media screen and (min-width:768px) {
+  .close{
+    top:0;
+    right:5px;
+  }
+  .next{
+    top:47px;
+  }
+  .previous{
+    top:95px;
+  }
+}
+
+
 [role="button"] {
   cursor: pointer;
 }

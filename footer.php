@@ -2,10 +2,11 @@
 </footer>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="http://localhost/jessiedmees-dev/js/freewall.js"></script>
         <script src="http://localhost/jessiedmees-dev/js/bootstrap.js"></script>
-        <script src="http://localhost/jessiedmees-dev/js/focuspoint.js"></script>
+        <script src="http://localhost/jessiedmees-dev/js/hammer.js"></script>
         <script src="http://localhost/jessiedmees-dev/js/enquire.js"></script>
 
         <script src="js/main.js"></script>
