@@ -14,7 +14,9 @@
             for ($row = 0; $row < $workarraysize; $row++){ 
       ?>
         <div data-toggle="modal" data-target="#<?php echo $works[$row]['work']?>" class="brick <?php echo $works[$row]['category'] . ' ' . $works[$row]['size']?>">
-          <img src="http://localhost/jessiedmees-dev/img/<?php echo $works[$row]['work']?>.png"/>
+          <div class="img-container">
+            <img src="http://localhost/jessiedmees-dev/img/<?php echo $works[$row]['work']?>.png"/>
+          </div>
           <div class="overlay"><div class="overlay-top"></div><div class="overlay-bottom"></div><div class="overlay-left"></div><div class="overlay-right"></div></div>
         </div>
 
