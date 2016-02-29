@@ -49,11 +49,8 @@
               <div class="modal-body">
 
         <?php } ?>
-          
-              <!-- Images -->
-              <img src="http://localhost/jessiedmees-dev/img/<?php echo $works[$row]['work']?>.png">
 
-              <!-- Images > 1 -->
+              <!-- Images -->
               <?php if (array_key_exists('images', $works[$row])){ 
                 $arraysize = count($works[$row]['images']);
                 for($i=0; $i<$arraysize; $i++){ ?> 

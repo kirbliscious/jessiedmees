@@ -7,8 +7,8 @@
 			selector: '.brick',
 			cellW: 80,
 			cellH: 80,
-			gutterX:15,
-			gutterY:15,
+			gutterX:18,
+			gutterY:18,
 			animate: true,
 			onResize: function() {
 				wall.fitHeight($(window).height() - 0);
@@ -39,8 +39,8 @@
 			selector: '.brick',
 			cellW: 80,
 			cellH: 'auto',
-			gutterX:0,
-			gutterY:0,
+			gutterX:5,
+			gutterY:5,
 			fixSize: 0,
 			animate: true,
 			onResize: function() {

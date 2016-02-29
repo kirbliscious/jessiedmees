@@ -599,52 +599,14 @@ input[type="button"].btn-block {
 /*---------------- 
 	Box Sizes
 ----------------*/
-/* Square */
-.size2-2 {
-  width: 80px;
-  height: 80px; }
-
-.size11 {
-  height: 160px;
-  width: 160px; }
-
-.size22 {
-  height: 320px;
-  width: 320px; }
-
-.size33 {
-  width: 480px;
-  height: 480px; }
-
-/* Horizontal */
-.size-hs {
-  width: 240px;
-  height: 160px; }
-
-.size-hm {
-  width: 480px;
-  height: 320px; }
-
-.size-hl {
-  width: 960px;
-  height: 640px; }
-
-.size43 {
-  width: 640px;
-  height: 480px; }
-
-.size53 {
-  width: 800px;
-  height: 480px; }
-
 /* Horizontal 1.5:1 */
 .size-hs {
   width: 120px;
   height: 80px; }
 
 .size-hm {
-  width: 360px;
-  height: 240px; }
+  width: 240px;
+  height: 160px; }
 
 .size-hl {
   width: 360px;
@@ -672,22 +634,6 @@ input[type="button"].btn-block {
 .size-vm-hs {
   width: 80px;
   height: 240px; }
-
-.size24 {
-  width: 320px;
-  height: 640px; }
-
-.size34 {
-  width: 480px;
-  height: 640px; }
-
-.size35 {
-  width: 480px;
-  height: 800px; }
-
-.size36 {
-  width: 480px;
-  height: 960px; }
 
 /* !FOCUSED IMAGES */
 /*-----------------------------------------*/
