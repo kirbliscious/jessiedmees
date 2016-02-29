@@ -17,8 +17,8 @@
   <ul class="filter-items">
     <li><a href="http://localhost/jessiedmees-dev/about.php">About</a></li>
     <li class="filter-label active">All</li>
-    <li class="filter-label" data-filter=".wearables">Wearables</li>
-    <li class="filter-label" data-filter=".paintings">Paintings</li>
+    <li class="filter-label" data-filter=".wearables">Wearable</li>
+    <li class="filter-label" data-filter=".paintings">Painting</li>
     <li class="filter-label" data-filter=".senior">Senior</li>
     <li class="filter-label" data-filter=".undergrad">Undergrad</li>
   </ul>

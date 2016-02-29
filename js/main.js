@@ -5,10 +5,10 @@
 		var wall = new Freewall("#Freewall");
 		wall.reset({
 			selector: '.brick',
-			cellW: 160,
-			cellH: 160,
-			gutterX:0,
-			gutterY:0,
+			cellW: 80,
+			cellH: 80,
+			gutterX:15,
+			gutterY:15,
 			animate: true,
 			onResize: function() {
 				wall.fitHeight($(window).height() - 0);

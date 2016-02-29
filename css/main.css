@@ -617,17 +617,17 @@ input[type="button"].btn-block {
   height: 480px; }
 
 /* Horizontal */
-.size21 {
-  width: 320px;
+.size-hs {
+  width: 240px;
   height: 160px; }
 
-.size31 {
-  width: 480px;
-  height: 160px; }
-
-.size32 {
+.size-hm {
   width: 480px;
   height: 320px; }
+
+.size-hl {
+  width: 960px;
+  height: 640px; }
 
 .size43 {
   width: 640px;
@@ -637,18 +637,41 @@ input[type="button"].btn-block {
   width: 800px;
   height: 480px; }
 
-/* Vertical */
-.size12 {
-  width: 160px;
-  height: 320px; }
+/* Horizontal 1.5:1 */
+.size-hs {
+  width: 120px;
+  height: 80px; }
 
-.size13 {
-  width: 160px;
-  height: 480px; }
+.size-hm {
+  width: 360px;
+  height: 240px; }
 
-.size23 {
-  width: 320px;
-  height: 480px; }
+.size-hl {
+  width: 360px;
+  height: 240px; }
+
+/* Vertical 1:1.5 */
+.size-vs {
+  width: 80px;
+  height: 120px; }
+
+.size-vm {
+  width: 160px;
+  height: 240px; }
+
+.size-vl {
+  width: 240px;
+  height: 360px; }
+
+/* Vertical short / Horizontal medium */
+.size-vs-hm {
+  width: 240px;
+  height: 80px; }
+
+/* Vertical Medium / Horizontal Short */
+.size-vm-hs {
+  width: 80px;
+  height: 240px; }
 
 .size24 {
   width: 320px;
@@ -867,14 +890,14 @@ button {
   font-style: normal; }
 @font-face {
   font-family: 'proxima-nova';
-  src: url("http://www.mshhll.com/dev/fonts/proximanova-light.eot");
-  src: local("☺"), url("http://www.mshhll.com/dev/fonts/proximanova-light.woff") format("woff"), url("http://www.mshhll.com/dev/fonts/proximanova-light.ttf") format("truetype"), url("http://www.mshhll.com/dev/fonts/proximanova-light.svg") format("svg");
+  src: url("http://localhost/jessiedmees-dev/fonts/proximanova-light.eot");
+  src: local("☺"), url("http://localhost/jessiedmees-dev/fonts/proximanova-light.woff") format("woff"), url("http://localhost/jessiedmees-dev/fonts/proximanova-light.ttf") format("truetype"), url("http://localhost/jessiedmees-dev/fonts/proximanova-light.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'monalisa';
-  src: url("http://www.mshhll.com/dev/fonts/monalisa.eot");
-  src: local("☺"), url("http://www.mshhll.com/dev/fonts/monalisa.woff") format("woff"), url("http://www.mshhll.com/dev/fonts/monalisa.ttf") format("truetype"), url("http://www.mshhll.com/dev/fonts/monalisa.svg") format("svg");
+  src: url("http://localhost/jessiedmees-dev/fonts/monalisa.eot");
+  src: local("☺"), url("http://localhost/jessiedmees-dev/fonts/monalisa.woff") format("woff"), url("http://localhost/jessiedmees-dev/fonts/monalisa.ttf") format("truetype"), url("http://localhost/jessiedmees-dev/fonts/monalisa.svg") format("svg");
   font-weight: normal;
   font-style: normal; }
 h1 {
@@ -963,6 +986,10 @@ a {
   position: relative;
   float: left;
   overflow: hidden; }
+  .brick img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 5px; }
 
 /*----------------
 	Photo Grid
@@ -975,7 +1002,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: .95;
+  opacity: 0;
   transition: opacity 2s ease; }
   .overlay:hover {
     opacity: 0;

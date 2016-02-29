@@ -12,9 +12,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="http://www.mshhll.com/dev/jessiedmees/css/main.css">
+        <link rel="stylesheet" href="http://localhost/jessiedmees-dev/css/main.css">
         
-        <script src="http://www.mshhll.com/dev/jessiedmees/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="http://localhost/jessiedmees-dev/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>

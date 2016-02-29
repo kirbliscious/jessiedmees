@@ -13,7 +13,8 @@
       <?php $workarraysize = count($works);
             for ($row = 0; $row < $workarraysize; $row++){ 
       ?>
-        <div data-toggle="modal" data-target="#<?php echo $works[$row]['work']?>" class="brick <?php echo $works[$row]['category'] . ' ' . $works[$row]['size']?>" style="background:url(http://localhost/jessiedmees-dev/img/<?php echo $works[$row]['work']?>.png) no-repeat center fixed;  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+        <div data-toggle="modal" data-target="#<?php echo $works[$row]['work']?>" class="brick <?php echo $works[$row]['category'] . ' ' . $works[$row]['size']?>">
+          <img src="http://localhost/jessiedmees-dev/img/<?php echo $works[$row]['work']?>.png"/>
           <div class="overlay"><div class="overlay-top"></div><div class="overlay-bottom"></div><div class="overlay-left"></div><div class="overlay-right"></div></div>
         </div>
 
