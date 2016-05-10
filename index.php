@@ -7,6 +7,7 @@
 
 
 
+
   <div id="Layout">
     <div id="Freewall" class="free-wall">
 
@@ -17,14 +18,19 @@
           <div class="img-container">
             <img src="http://localhost/jessiedmees-dev/img/<?php echo $works[$row]['work']?>.png"/>
           </div>
-          <div class="overlay"><div class="overlay-top"></div><div class="overlay-bottom"></div><div class="overlay-left"></div><div class="overlay-right"></div></div>
         </div>
+      <?php  } ?> <!-- $works -->
 
-        <!-- Modal -->
-        <!-- Modal w/sidebar -->
+    </div> <!-- #Freewall -->
+
+    <?php $workarraysize = count($works);
+            for ($row = 0; $row < $workarraysize; $row++){ 
+      ?>
+    <!-- Modal -->
+        <!-- Modal w/text -->
         <?php if (array_key_exists('sidebarswitch', $works[$row])){ ?>
 
-          <div class="modal fade in modal-wsidebar" id="<?php echo $works[$row]['work']?>">
+          <div class="modal fade in modal-wsidebar <?php echo $works[$row]['category']?>" id="<?php echo $works[$row]['work']?>">
             <div class="modal-content">
               <aside class="sidebar">
                 <div class="sidebar-container">
@@ -43,8 +49,8 @@
          
         <?php } else { ?>
 
-          <!-- Modal w/o sidebar -->
-          <div class="modal fade" id="<?php echo $works[$row]['work']?>">
+          <!-- Modal w/o text -->
+          <div class="modal fade <?php echo $works[$row]['category']?>" id="<?php echo $works[$row]['work']?>">
             <div class="modal-content">
               <div class="modal-body">
 
@@ -70,19 +76,17 @@
             <!-- Thumbnails -->
             <?php if (array_key_exists('images', $works[$row])){ ?>
               <ul class="thumbnails">
-                <li class="active"></li>
+                
                 <?php $arraysize = count($works[$row]['images']);
                 for($i=0; $i<$arraysize; $i++){ ?> 
-                  <li></li>
+                 <!--  <li></li> -->
                 <?php } ?>
               </ul>
             <?php } ?>
 
           </div> <!-- .modal-content -->
         </div> <!-- .modal -->
-      <?php  } ?> <!-- $works -->
-
-    </div> <!-- #Freewall -->
+      <?php } ?>
   </div> <!-- .layout -->
 
 <?php include("footer.php"); ?>

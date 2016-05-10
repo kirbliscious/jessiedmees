@@ -6,8 +6,8 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="http://localhost/jessiedmees-dev/js/freewall.js"></script>
         <script src="http://localhost/jessiedmees-dev/js/bootstrap.js"></script>
-        <script src="http://localhost/jessiedmees-dev/js/hammer.js"></script>
         <script src="http://localhost/jessiedmees-dev/js/enquire.js"></script>
+        <script src="http://localhost/jessiedmees-dev/js/hammer.min.js"></script>
 
         <script src="js/main.js"></script>
 

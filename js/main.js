@@ -11,7 +11,7 @@
 			gutterY:18,
 			animate: true,
 			onResize: function() {
-				wall.fitHeight($(window).height() - 0);
+				wall.fitHeight($(window).height() - 15);
 			}
 		});
 		// caculator height for IE7;
@@ -60,6 +60,14 @@
 			}
 		});
 	};
+
+	/* Brick */
+	var faderate;
+	var max = .90, min = .50;
+	
+	function fade(){
+		faderate = Math.random() * (max-min) + min;
+	}
 
 	/*----------------- 
 		Variables
@@ -111,24 +119,48 @@
         });
     });
 
-    /*----------------- 
+     /*----------------- 
 		Modal
+	-----------------*/
+    $('.modal').on('show.bs.modal', function() {
+	  var modal = this;
+	  var hash = modal.id;
+	  window.location.hash = hash;
+	  window.onhashchange = function() {
+	    if (!location.hash){
+	      $(modal).modal('hide');
+	    }
+	  }
+	});
+
+	$('.modal').on('hide', function() {
+	  var hash = this.id;
+	  history.pushState('', document.title, window.location.pathname);
+	});
+
+
+    /*----------------- 
+		Next / Previous
 	-----------------*/
 	/* Navigation - Next / Previous */
 	$(document).on("click", ".next", function(event){
 		$(this).closest('.modal').modal('hide');
     	var category = $('.filter-label.active').text().toLowerCase();
     	var categoryclass = "."+category;
-    	$(this).closest('.modal').nextAll(categoryclass).first().next().modal('show');
+    	console.log(categoryclass);
+
+    	$(this).closest('.modal').nextAll("div.modal"+categoryclass+":first").modal('show');
 	});
 
 	$(document).on("click", ".previous", function(event){
     	var category = $('.filter-label.active').text().toLowerCase();
     	console.log(category);
     	var categoryclass = "."+category;
-    	$(this).closest('.modal').prevAll(categoryclass).first().prev().modal('show');
+    	$(this).closest('.modal').prevAll("div.modal"+categoryclass+":first").modal('show');
     	$(this).closest('.modal').modal('hide');
 	});
+
+
 
 
 
